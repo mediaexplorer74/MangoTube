@@ -5,7 +5,7 @@ My mini-research of YouTube cleint for Windows Mobile 8.1 powered by Invidious..
 ## Screenshots
 ![](Images/mangotube.png)
 
-(photo/screenshot form Reddit's https://www.reddit.com/r/windowsphone/comments/1gbnz0d/mangotube_scaling_issues_when_viewing_videos_any/ post)
+(photo/screenshot from Reddit's https://www.reddit.com/r/windowsphone/comments/1gbnz0d/mangotube_scaling_issues_when_viewing_videos_any/ post)
 
 ## Some words from the author
 
