@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.34929.205
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangoTube", "MangoTube\MangoTube.csproj", "{C3501229-BBFE-4AD6-B425-C762A68E997E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|ARM.Build.0 = Debug|ARM
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|ARM.Deploy.0 = Debug|ARM
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|ARM64.Build.0 = Debug|ARM64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|x64.ActiveCfg = Debug|x64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|x64.Build.0 = Debug|x64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|x64.Deploy.0 = Debug|x64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|x86.ActiveCfg = Debug|x86
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|x86.Build.0 = Debug|x86
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Debug|x86.Deploy.0 = Debug|x86
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|ARM.ActiveCfg = Release|ARM
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|ARM.Build.0 = Release|ARM
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|ARM.Deploy.0 = Release|ARM
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|ARM64.ActiveCfg = Release|ARM64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|ARM64.Build.0 = Release|ARM64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|ARM64.Deploy.0 = Release|ARM64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|x64.ActiveCfg = Release|x64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|x64.Build.0 = Release|x64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|x64.Deploy.0 = Release|x64
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|x86.ActiveCfg = Release|x86
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|x86.Build.0 = Release|x86
+		{C3501229-BBFE-4AD6-B425-C762A68E997E}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF1AA615-1F12-484F-A224-44922F6C717A}
+	EndGlobalSection
+EndGlobal
