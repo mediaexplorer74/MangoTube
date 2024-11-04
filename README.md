@@ -1,6 +1,6 @@
 # MangoTube - master branch
 
-My mini-research of YouTube cleint for Windows Mobile 8.1 powered by Invidious...
+My mini-research of YouTube client for Windows Mobile 8.1 powered by Invidious...
 
 ## Screenshots
 ![](Images/mangotube.png)
