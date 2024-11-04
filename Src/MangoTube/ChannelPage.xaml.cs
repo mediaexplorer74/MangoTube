@@ -1,4 +1,6 @@
-﻿using System;
+﻿// ChannelPage
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -28,7 +30,7 @@ namespace ValleyTube
 
         }
 
-        private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+        private void HardwareButtons_BackPressed(object sender, /*BackPressed*/EventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -38,12 +40,12 @@ namespace ValleyTube
             if (rootFrame.CanGoBack)
             {
                 rootFrame.GoBack();
-                e.Handled = true; 
+                //e.Handled = true; 
             }
             else
             {
              
-                e.Handled = false; 
+                //e.Handled = false; 
             }
         }
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿// SearchPage
+
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.Http;
@@ -28,7 +30,7 @@ private int _currentChannelIndex = 0;
             this.InitializeComponent();
         }
 
-        private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
+        private void HardwareButtons_BackPressed(object sender, /*BackPressed*/EventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -38,12 +40,12 @@ private int _currentChannelIndex = 0;
             if (rootFrame.CanGoBack)
             {
                 rootFrame.GoBack();
-                e.Handled = true;
+                //e.Handled = true;
             }
             else
             {
 
-                e.Handled = false;
+                //e.Handled = false;
             }
         }
 

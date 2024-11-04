@@ -1,6 +1,10 @@
 # MangoTube - uwp branch
+![logo](Images/logo.png)
 
 My mini-research of YouTube client for Windows 10 Mobile powered by Invidious =)
+
+## Screenshot(s)
+![](Images/shot01.png)
 
 
 ## Additional tech info

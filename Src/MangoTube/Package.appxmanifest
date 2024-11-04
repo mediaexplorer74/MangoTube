@@ -4,18 +4,19 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  IgnorableNamespaces="uap mp">
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap mp uap3">
 
   <Identity
-    Name="0b8cfb4f-9046-4df8-8121-d4b80faf8314"
+    Name="MEMangoTubeV2"
     Publisher="CN=Admin"
-    Version="1.0.0.0" />
+    Version="2.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0b8cfb4f-9046-4df8-8121-d4b80faf8314" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="0b8cfb42-9046-4df8-8121-d4b80faf8310" PhonePublisherId="22000002-3311-1100-0040-800006000200"/>
 
   <Properties>
-    <DisplayName>ValleyTube</DisplayName>
-    <PublisherDisplayName>Admin</PublisherDisplayName>
+    <DisplayName>MangoTube 2.0</DisplayName>
+    <PublisherDisplayName>mediaexplorer</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,18 +33,23 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="ValleyTube.App">
       <uap:VisualElements
-        DisplayName="ValleyTube"
+        DisplayName="MangoTube 2.0"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="ValleyTube"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        BackgroundColor="transparent" Description="MangoTube uwp app">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscapeFlipped"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
 
   <Capabilities>
     <Capability Name="internetClient" />
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+    <uap:Capability Name="removableStorage"/>
   </Capabilities>
 </Package>
