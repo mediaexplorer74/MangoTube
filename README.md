@@ -6,7 +6,6 @@ My mini-research of YouTube client for Windows 10 Mobile powered by Invidious =)
 ## Screenshot(s)
 ![](Images/shot01.png)
 ![](Images/shot02.png)
-![](Images/shot03.png)
 
 
 ## Additional tech info
@@ -22,6 +21,8 @@ New update coming probbaly friday or thursday or this weekend!
 Warning As Of 11/9/2024 : invidious is having some issues on all instances please wait for a fix
 
 https://inv.nadeko.net - this instance works (I am working on setting to be the default soon)"
+
+-- Erie (Valley Software)
 
 
 ## Credits
