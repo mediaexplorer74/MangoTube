@@ -30,19 +30,19 @@ https://inv.nadeko.net - this instance works (I am working on setting to be the 
 - https://github.com/erievs/mangotube Original MangoTube project for Windows Mobile 8.1 and above
 
 ## Todo
-- explore W10M build 10240 (Astoria) compatibility issued
-- Delete some WM 8.1 "depandancies" and generate normal UWP app :)
-- Background Audio
+- explore MediaPlayer W10M build 10240 (Astoria) compatibility issues
+- Delete some WM 8.1 "depandencies" (Back Hardware button support, etc. :)
+- Realize Background Audio
 - Make Live Tile ;)
-- Add channels
+- Add pre-defined (cache) channels
 - Add playlists
 - Fix certain videos not playing
-- ? )
+- Google Auth? )
 
 ## ..
-As is. N support. RnD only / DIY =)
+As is. No support. RnD only / DIY =)
 
 ## .
 mediaexplorer
 
-November 4, 2024
+December 4, 2024
