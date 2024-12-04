@@ -5,12 +5,12 @@
     xmlns:local="using:ValleyTube">
 
     <!-- TODO : RnD Resource dictionary... -->
-        <!--Application.Resources>
+    <Application.Resources>
         <local:NullOrEmptyToVisibilityConverter x:Key="NullOrEmptyToVisibilityConverter"/>
         <local:StringToImageSourceConverter x:Key="StringToImageSourceConverter"/>
         <local:ChannelTypeToVisibilityConverter x:Key="ChannelTypeToVisibilityConverter"/>
         <local:ChannelTypeToVisibilityConverterOppsite x:Key="ChannelTypeToVisibilityConverterOppsite"/>
-    </Application.Resources-->
+    </Application.Resources>
 
 </Application>
 

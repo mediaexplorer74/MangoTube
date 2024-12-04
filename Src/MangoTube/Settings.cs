@@ -16,20 +16,18 @@ namespace ValleyTube
         private static bool _showSponserSkipMessage;
         private static bool _useFormatStreamForDownloads;
 
-        private static string _invidiousInstance = "https://inv.nadeko.net";
+        private static string _invidiousInstance = "https://inv.nadeko.net"; // "https://invidious.jing.rocks"//"https://invidious.nerdvpn.de";
         private static string _invidiousInstanceComments = "https://inv.nadeko.net";
         private static string _returnDislikeInstance = "https://returnyoutubedislikeapi.com";
         private static string _SponserBlockInstance = "https://sponsor.ajay.app";
 
-        private static string accessToken = "";
+        private static string _youTubeAPIKey = "AIza******************************";                                 //your youtube api key
+        private static string _clientId = "***************************************.apps.googleusercontent.com";      // your youtube api client id
+        private static string _clientSecret = "***********************************";                                 // your youtube api client secret
+        private static string accessToken = "";                                                                      // leave it empty 
 
-        private static string _clientId = "";
 
-        private static string _clientSecret = ""; // shhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-
-        private static string _youTubeAPIKey = "";
-
-        public static string InnerTubeAPIKey = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8";
+        public static string InnerTubeAPIKey = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"; 
 
         private static string _scope = "https://www.googleapis.com/auth/youtube.force-ssl";
 

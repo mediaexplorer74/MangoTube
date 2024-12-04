@@ -1,10 +1,12 @@
-# MangoTube - uwp branch
+# MangoTube 2.0.1 - uwp branch
 ![logo](Images/logo.png)
 
 My mini-research of YouTube client for Windows 10 Mobile powered by Invidious =)
 
 ## Screenshot(s)
 ![](Images/shot01.png)
+![](Images/shot02.png)
+![](Images/shot03.png)
 
 
 ## Additional tech info

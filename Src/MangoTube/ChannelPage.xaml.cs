@@ -12,6 +12,9 @@ using Newtonsoft.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Collections.ObjectModel;
 using Windows.Phone.UI.Input;
+using Windows.UI.Core;
+using Windows.Web.UI.Interop;
+using Windows.Foundation.Metadata;
 
 namespace ValleyTube
 {
@@ -21,7 +24,8 @@ namespace ValleyTube
         private string videoContinuation = string.Empty; 
         private string communityContinuation;
         private bool isLoadingMoreVideos = false;
-        public ObservableCollection<VideoObjectAgain> Videos { get; set; } = new ObservableCollection<VideoObjectAgain>();
+        public ObservableCollection<VideoObjectAgain> Videos { get; set; } 
+            = new ObservableCollection<VideoObjectAgain>();
 
         public ChannelPage()
         {
@@ -30,7 +34,8 @@ namespace ValleyTube
 
         }
 
-        private void HardwareButtons_BackPressed(object sender, /*BackPressed*/EventArgs e)
+        /*
+        private void HardwareButtons_BackPressed(object sender, EventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -48,12 +53,42 @@ namespace ValleyTube
                 //e.Handled = false; 
             }
         }
+        */
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
+
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility
+                = AppViewBackButtonVisibility.Visible;
+
+            SystemNavigationManager.GetForCurrentView().BackRequested += (s, a) =>
+            {
+                
+                Frame rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(MainPage));
+
+                a.Handled = true;
+               
+            };
+
+            if (ApiInformation.IsApiContractPresent("Windows.Phone.PhoneContract", 1, 0))
+            {
+                Windows.Phone.UI.Input.HardwareButtons.BackPressed += (s, a) =>
+                {
+                   
+                    Frame rootFrame = Window.Current.Content as Frame;
+                    rootFrame.Navigate(typeof(MainPage));
+
+                    a.Handled = true;
+                };
+            }
+       
+
+
             string parameter = e.Parameter as string;
+
             if (parameter != null)
             {
                 channelId = parameter;
@@ -64,9 +99,24 @@ namespace ValleyTube
                 System.Diagnostics.Debug.WriteLine("Error: Parameter is not a valid string.");
 
             }
+        }//OnNavigatetedTo
+
+
+        // BackButton handler
+        private void BackButton_Tapped(object sender, BackRequestedEventArgs e)
+        {
+            //Debug.WriteLine("BACK button pressed: " + e.ToString());
+
+            //if (WebViewControl.CanGoBack)
+            //{
+            //    WebViewControl.GoBack();
+                //Debug.WriteLine("BaseUri: " + WebViewControl.BaseUri.ToString());
+            //}
         }
 
 
+
+        // LoadChannelData
         private async Task LoadChannelData()
         {
             await LoadChannelDetails();

@@ -10,7 +10,7 @@
   <Identity
     Name="MEMangoTubeV2"
     Publisher="CN=Admin"
-    Version="2.0.0.0" />
+    Version="2.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="0b8cfb42-9046-4df8-8121-d4b80faf8310" PhonePublisherId="22000002-3311-1100-0040-800006000200"/>
 

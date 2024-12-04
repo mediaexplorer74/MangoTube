@@ -256,7 +256,8 @@ namespace ValleyTube
         {
             var videos = new List<VideoResult>();
 
-            if (SubscriptionManager.SubscribedAuthors == null || SubscriptionManager.SubscribedAuthors.Count == 0)
+            if (SubscriptionManager.SubscribedAuthors == null 
+                  || SubscriptionManager.SubscribedAuthors.Count == 0)
             {
                 var dialog = new MessageDialog("Subscribe to a channel!");
                 await dialog.ShowAsync();

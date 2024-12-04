@@ -12,6 +12,9 @@ using Newtonsoft.Json;
 using Windows.UI.Xaml.Media;
 using System.Collections.Generic;
 using Windows.Phone.UI.Input;
+using Windows.Foundation.Metadata;
+using Windows.UI.Core;
+using Windows.UI.Xaml.Navigation;
 
 namespace ValleyTube
 {
@@ -23,14 +26,15 @@ namespace ValleyTube
         private ObservableCollection<VideoResult> _searchResults = new ObservableCollection<VideoResult>();
         private CancellationTokenSource _cancellationTokenSource;
         private const int ChannelsToLoad = 10; 
-private int _currentChannelIndex = 0; 
+        private int _currentChannelIndex = 0; 
 
         public SearchPage()
         {
             this.InitializeComponent();
         }
 
-        private void HardwareButtons_BackPressed(object sender, /*BackPressed*/EventArgs e)
+        /*
+        private void HardwareButtons_BackPressed(object sender, EventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -40,21 +44,57 @@ private int _currentChannelIndex = 0;
             if (rootFrame.CanGoBack)
             {
                 rootFrame.GoBack();
-                //e.Handled = true;
+                e.Handled = true;
             }
             else
             {
 
-                //e.Handled = false;
+                e.Handled = false;
             }
         }
+        */
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility
+                = AppViewBackButtonVisibility.Visible;
+
+            SystemNavigationManager.GetForCurrentView().BackRequested += (s, a) =>
+            {
+
+                Frame rootFrame = Window.Current.Content as Frame;
+                rootFrame.Navigate(typeof(MainPage));
+
+                a.Handled = true;
+
+            };
+
+            if (ApiInformation.IsApiContractPresent("Windows.Phone.PhoneContract", 1, 0))
+            {
+                Windows.Phone.UI.Input.HardwareButtons.BackPressed += (s, a) =>
+                {
+
+                    Frame rootFrame = Window.Current.Content as Frame;
+                    rootFrame.Navigate(typeof(MainPage));
+
+                    a.Handled = true;
+                };
+            }
+
+
+        }//OnNavigatetedTo
+
 
         private async Task Search(string query, int page = 1)
         {
             if (_isSearching || !_hasMoreResults) return;
 
             _isSearching = true;
-            string apiUrl = string.Format(Settings.InvidiousInstance + "/api/v1/search?q={0}&page={1}&sort=relevance",
+            string apiUrl = string.Format(Settings.InvidiousInstance 
+                + "/api/v1/search?q={0}&page={1}&sort=relevance",
                                             Uri.EscapeDataString(query), page);
 
             using (var httpClient = new HttpClient())
@@ -118,7 +158,8 @@ private int _currentChannelIndex = 0;
 
             if (scrollViewer != null)
             {
-                if (scrollViewer.VerticalOffset >= scrollViewer.ScrollableHeight - 100 && !_isSearching && _hasMoreResults)
+                if (scrollViewer.VerticalOffset >= scrollViewer.ScrollableHeight - 100 
+                    && !_isSearching && _hasMoreResults)
                 {
                     string query = SearchBox.Text.Trim();
                     if (!string.IsNullOrEmpty(query))

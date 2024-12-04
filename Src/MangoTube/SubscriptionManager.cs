@@ -100,7 +100,9 @@ public static class SubscriptionManager
             var serializedIds = FileIO.ReadTextAsync(file).AsTask().Result;
             if (!string.IsNullOrEmpty(serializedIds))
             {
-                SubscribedAuthors = serializedIds.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                SubscribedAuthors = serializedIds.Split(new char[] { ',' }, 
+                    StringSplitOptions.RemoveEmptyEntries).ToList();
+
                 System.Diagnostics.Debug.WriteLine("Subscriptions successfully loaded.");
             }
             else

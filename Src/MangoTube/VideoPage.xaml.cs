@@ -251,7 +251,8 @@ namespace ValleyTube
                     sponsorSegments = await GetSponsorSegments(videoId);
                     if (selectedQuality.EndsWith("-innertube"))
                     {
-                        string innerTubeVideoUrl = Settings.InnerTubeBase + "/youtubei/v1/player?key=" + Settings.InnerTubeAPIKey;
+                        string innerTubeVideoUrl = Settings.InnerTubeBase 
+                            + "/youtubei/v1/player?key=" + Settings.InnerTubeAPIKey;
 
                         DateTime currentUtcDateTime = DateTime.UtcNow;
                         long signature_timestamp = (long)(currentUtcDateTime - new DateTime(1970, 1, 1)).TotalSeconds;
